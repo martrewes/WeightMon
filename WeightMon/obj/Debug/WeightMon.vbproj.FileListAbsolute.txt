@@ -1,0 +1,12 @@
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\bin\Debug\WeightMon.exe.config
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\bin\Debug\WeightMon.exe
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\bin\Debug\WeightMon.pdb
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\bin\Debug\WeightMon.xml
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\obj\Debug\WeightMon.vbprojAssemblyReference.cache
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\obj\Debug\WeightMon.Form1.resources
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\obj\Debug\WeightMon.Resources.resources
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\obj\Debug\WeightMon.vbproj.GenerateResource.cache
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\obj\Debug\WeightMon.vbproj.CoreCompileInputs.cache
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\obj\Debug\WeightMon.exe
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\obj\Debug\WeightMon.xml
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\obj\Debug\WeightMon.pdb

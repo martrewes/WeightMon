@@ -25,9 +25,9 @@ Partial Class Main
         Me.grdBen = New System.Windows.Forms.DataGridView()
         Me.colDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colWeight = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.colLbs = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colStone = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnAdd = New System.Windows.Forms.Button()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.tbxKG = New System.Windows.Forms.TextBox()
         Me.tbxStone = New System.Windows.Forms.TextBox()
@@ -65,15 +65,6 @@ Partial Class Main
         Me.colWeight.Name = "colWeight"
         Me.colWeight.Width = 150
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(108, 87)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(116, 50)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'colLbs
         '
         Me.colLbs.HeaderText = "Lbs"
@@ -88,6 +79,15 @@ Partial Class Main
         Me.colStone.Name = "colStone"
         Me.colStone.Width = 150
         '
+        'btnAdd
+        '
+        Me.btnAdd.Location = New System.Drawing.Point(108, 87)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(116, 50)
+        Me.btnAdd.TabIndex = 1
+        Me.btnAdd.Text = "Add"
+        Me.btnAdd.UseVisualStyleBackColor = True
+        '
         'DateTimePicker1
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
@@ -98,21 +98,21 @@ Partial Class Main
         '
         'tbxKG
         '
-        Me.tbxKG.Location = New System.Drawing.Point(339, 157)
+        Me.tbxKG.Location = New System.Drawing.Point(283, 157)
         Me.tbxKG.Name = "tbxKG"
         Me.tbxKG.Size = New System.Drawing.Size(100, 26)
         Me.tbxKG.TabIndex = 3
         '
         'tbxStone
         '
-        Me.tbxStone.Location = New System.Drawing.Point(556, 157)
+        Me.tbxStone.Location = New System.Drawing.Point(451, 157)
         Me.tbxStone.Name = "tbxStone"
         Me.tbxStone.Size = New System.Drawing.Size(100, 26)
         Me.tbxStone.TabIndex = 4
         '
         'tbxLbs
         '
-        Me.tbxLbs.Location = New System.Drawing.Point(675, 157)
+        Me.tbxLbs.Location = New System.Drawing.Point(570, 157)
         Me.tbxLbs.Name = "tbxLbs"
         Me.tbxLbs.Size = New System.Drawing.Size(95, 26)
         Me.tbxLbs.TabIndex = 5
@@ -120,7 +120,7 @@ Partial Class Main
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(339, 112)
+        Me.RadioButton1.Location = New System.Drawing.Point(283, 112)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(65, 24)
         Me.RadioButton1.TabIndex = 6
@@ -131,7 +131,7 @@ Partial Class Main
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(556, 112)
+        Me.RadioButton2.Location = New System.Drawing.Point(451, 112)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(80, 24)
         Me.RadioButton2.TabIndex = 7
@@ -150,7 +150,7 @@ Partial Class Main
         Me.Controls.Add(Me.tbxStone)
         Me.Controls.Add(Me.tbxKG)
         Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.grdBen)
         Me.Name = "Main"
         Me.Text = "Form1"
@@ -165,7 +165,7 @@ Partial Class Main
     Friend WithEvents colWeight As DataGridViewTextBoxColumn
     Friend WithEvents colLbs As DataGridViewTextBoxColumn
     Friend WithEvents colStone As DataGridViewTextBoxColumn
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnAdd As Button
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents tbxKG As TextBox
     Friend WithEvents tbxStone As TextBox

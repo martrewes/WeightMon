@@ -173,4 +173,8 @@ Public Class Main
         Next
 
     End Sub
+
+    Private Sub btnGoal_Click(sender As Object, e As EventArgs) Handles btnGoal.Click
+        SetGoal.Show()
+    End Sub
 End Class

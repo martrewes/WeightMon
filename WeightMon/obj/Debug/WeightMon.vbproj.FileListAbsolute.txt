@@ -10,3 +10,4 @@ D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\obj\Debug\WeightMon
 D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\obj\Debug\WeightMon.xml
 D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\obj\Debug\WeightMon.pdb
 D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\obj\Debug\WeightMon.Main.resources
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\obj\Debug\WeightMon.SetGoal.resources

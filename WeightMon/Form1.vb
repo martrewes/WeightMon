@@ -96,6 +96,9 @@ Public Class Main
 
         If refreshCheck = True Then
             RefreshCharts()
+            My.Settings.goalBen = goalBen
+            My.Settings.goalSio = goalSio
+
         Else
 
         End If
@@ -195,6 +198,9 @@ Public Class Main
         If (benWeight - goalBen) < 0 Then
             lblBenGoal.ForeColor = Color.Green
             lblBenStone.ForeColor = Color.Green
+        Else
+            lblBenGoal.ForeColor = Color.Black
+            lblBenStone.ForeColor = Color.Black
         End If
 
         lastIndex = grdSio.Rows.Count - 1
@@ -206,6 +212,9 @@ Public Class Main
         If (sioWeight - goalSio) < 0 Then
             lblSioGoal.ForeColor = Color.Green
             lblSioStone.ForeColor = Color.Green
+        Else
+            lblSioGoal.ForeColor = Color.Black
+            lblSioStone.ForeColor = Color.Black
         End If
         refreshCheck = False
 

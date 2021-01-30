@@ -22,14 +22,14 @@ Partial Class Main
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea7 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend7 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series13 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series14 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea8 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend8 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series15 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series16 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.grdBen = New System.Windows.Forms.DataGridView()
         Me.colDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colWeight = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -273,35 +273,35 @@ Partial Class Main
         '
         Me.chtBen.BackSecondaryColor = System.Drawing.Color.Silver
         Me.chtBen.BorderSkin.BorderColor = System.Drawing.Color.Gray
-        ChartArea1.AxisX.IsMarginVisible = False
-        ChartArea1.AxisX.IsStartedFromZero = False
-        ChartArea1.AxisX.LabelStyle.Enabled = False
-        ChartArea1.AxisX.MajorGrid.LineWidth = 0
-        ChartArea1.AxisY.IsStartedFromZero = False
-        ChartArea1.AxisY.LabelStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ChartArea1.AxisY.LineColor = System.Drawing.Color.LightGray
-        ChartArea1.AxisY.MajorGrid.LineWidth = 0
-        ChartArea1.AxisY.Maximum = 100.0R
-        ChartArea1.AxisY.Minimum = 70.0R
-        ChartArea1.Name = "ChartArea1"
-        Me.chtBen.ChartAreas.Add(ChartArea1)
-        Legend1.Enabled = False
-        Legend1.Name = "Legend1"
-        Me.chtBen.Legends.Add(Legend1)
+        ChartArea7.AxisX.IsMarginVisible = False
+        ChartArea7.AxisX.IsStartedFromZero = False
+        ChartArea7.AxisX.LabelStyle.Enabled = False
+        ChartArea7.AxisX.MajorGrid.LineWidth = 0
+        ChartArea7.AxisY.IsStartedFromZero = False
+        ChartArea7.AxisY.LabelStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea7.AxisY.LineColor = System.Drawing.Color.LightGray
+        ChartArea7.AxisY.MajorGrid.LineWidth = 0
+        ChartArea7.AxisY.Maximum = 100.0R
+        ChartArea7.AxisY.Minimum = 70.0R
+        ChartArea7.Name = "ChartArea1"
+        Me.chtBen.ChartAreas.Add(ChartArea7)
+        Legend7.Enabled = False
+        Legend7.Name = "Legend1"
+        Me.chtBen.Legends.Add(Legend7)
         Me.chtBen.Location = New System.Drawing.Point(11, 284)
         Me.chtBen.Name = "chtBen"
         Me.chtBen.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series1.ChartArea = "ChartArea1"
-        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-        Series1.CustomProperties = "EmptyPointValue=Zero"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Series2.ChartArea = "ChartArea1"
-        Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series2"
-        Me.chtBen.Series.Add(Series1)
-        Me.chtBen.Series.Add(Series2)
+        Series13.ChartArea = "ChartArea1"
+        Series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series13.CustomProperties = "EmptyPointValue=Zero"
+        Series13.Legend = "Legend1"
+        Series13.Name = "Series1"
+        Series14.ChartArea = "ChartArea1"
+        Series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series14.Legend = "Legend1"
+        Series14.Name = "Series2"
+        Me.chtBen.Series.Add(Series13)
+        Me.chtBen.Series.Add(Series14)
         Me.chtBen.Size = New System.Drawing.Size(254, 150)
         Me.chtBen.TabIndex = 13
         Me.chtBen.Text = "Chart1"
@@ -379,35 +379,35 @@ Partial Class Main
         '
         Me.chtSio.BackSecondaryColor = System.Drawing.Color.Silver
         Me.chtSio.BorderSkin.BorderColor = System.Drawing.Color.Gray
-        ChartArea2.AxisX.IsMarginVisible = False
-        ChartArea2.AxisX.IsStartedFromZero = False
-        ChartArea2.AxisX.LabelStyle.Enabled = False
-        ChartArea2.AxisX.MajorGrid.LineWidth = 0
-        ChartArea2.AxisY.IsStartedFromZero = False
-        ChartArea2.AxisY.LabelStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ChartArea2.AxisY.LineColor = System.Drawing.Color.LightGray
-        ChartArea2.AxisY.MajorGrid.LineWidth = 0
-        ChartArea2.AxisY.Maximum = 100.0R
-        ChartArea2.AxisY.Minimum = 70.0R
-        ChartArea2.Name = "ChartArea1"
-        Me.chtSio.ChartAreas.Add(ChartArea2)
-        Legend2.Enabled = False
-        Legend2.Name = "Legend1"
-        Me.chtSio.Legends.Add(Legend2)
+        ChartArea8.AxisX.IsMarginVisible = False
+        ChartArea8.AxisX.IsStartedFromZero = False
+        ChartArea8.AxisX.LabelStyle.Enabled = False
+        ChartArea8.AxisX.MajorGrid.LineWidth = 0
+        ChartArea8.AxisY.IsStartedFromZero = False
+        ChartArea8.AxisY.LabelStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea8.AxisY.LineColor = System.Drawing.Color.LightGray
+        ChartArea8.AxisY.MajorGrid.LineWidth = 0
+        ChartArea8.AxisY.Maximum = 100.0R
+        ChartArea8.AxisY.Minimum = 70.0R
+        ChartArea8.Name = "ChartArea1"
+        Me.chtSio.ChartAreas.Add(ChartArea8)
+        Legend8.Enabled = False
+        Legend8.Name = "Legend1"
+        Me.chtSio.Legends.Add(Legend8)
         Me.chtSio.Location = New System.Drawing.Point(269, 284)
         Me.chtSio.Name = "chtSio"
         Me.chtSio.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series3.ChartArea = "ChartArea1"
-        Series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-        Series3.CustomProperties = "EmptyPointValue=Zero"
-        Series3.Legend = "Legend1"
-        Series3.Name = "Series1"
-        Series4.ChartArea = "ChartArea1"
-        Series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-        Series4.Legend = "Legend1"
-        Series4.Name = "Series2"
-        Me.chtSio.Series.Add(Series3)
-        Me.chtSio.Series.Add(Series4)
+        Series15.ChartArea = "ChartArea1"
+        Series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series15.CustomProperties = "EmptyPointValue=Zero"
+        Series15.Legend = "Legend1"
+        Series15.Name = "Series1"
+        Series16.ChartArea = "ChartArea1"
+        Series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series16.Legend = "Legend1"
+        Series16.Name = "Series2"
+        Me.chtSio.Series.Add(Series15)
+        Me.chtSio.Series.Add(Series16)
         Me.chtSio.Size = New System.Drawing.Size(254, 150)
         Me.chtSio.TabIndex = 26
         Me.chtSio.Text = "Chart1"
@@ -431,7 +431,9 @@ Partial Class Main
         Me.Controls.Add(Me.grdSio)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.grdBen)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.MaximizeBox = False
         Me.Name = "Main"
         Me.ShowIcon = False
         Me.Text = "Weight Monitor"

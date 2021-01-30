@@ -1,0 +1,13 @@
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\bin\Release\WeightMon.exe.config
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\bin\Release\WeightMon.exe
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\bin\Release\WeightMon.pdb
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\bin\Release\WeightMon.xml
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\obj\Release\WeightMon.vbprojAssemblyReference.cache
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\obj\Release\WeightMon.Main.resources
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\obj\Release\WeightMon.Resources.resources
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\obj\Release\WeightMon.SetGoal.resources
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\obj\Release\WeightMon.vbproj.GenerateResource.cache
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\obj\Release\WeightMon.vbproj.CoreCompileInputs.cache
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\obj\Release\WeightMon.exe
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\obj\Release\WeightMon.xml
+D:\Documents\Visual Studio 2019\Projects\WeightMon\WeightMon\obj\Release\WeightMon.pdb

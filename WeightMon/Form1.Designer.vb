@@ -22,14 +22,14 @@ Partial Class Main
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series7 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series8 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.grdBen = New System.Windows.Forms.DataGridView()
         Me.colDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colWeight = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -55,8 +55,10 @@ Partial Class Main
         Me.btnGoal = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.lblBenGoal = New System.Windows.Forms.Label()
+        Me.lblSioGoal = New System.Windows.Forms.Label()
+        Me.lblBenStone = New System.Windows.Forms.Label()
+        Me.lblSioStone = New System.Windows.Forms.Label()
         Me.chtSio = New System.Windows.Forms.DataVisualization.Charting.Chart()
         CType(Me.grdBen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.grdSio, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -72,7 +74,7 @@ Partial Class Main
         Me.grdBen.AllowUserToDeleteRows = False
         Me.grdBen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdBen.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colDate, Me.colWeight, Me.colLbs, Me.colStone})
-        Me.grdBen.Location = New System.Drawing.Point(11, 165)
+        Me.grdBen.Location = New System.Drawing.Point(11, 113)
         Me.grdBen.Margin = New System.Windows.Forms.Padding(2)
         Me.grdBen.Name = "grdBen"
         Me.grdBen.RowHeadersVisible = False
@@ -111,10 +113,10 @@ Partial Class Main
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(447, 104)
+        Me.btnAdd.Location = New System.Drawing.Point(446, 16)
         Me.btnAdd.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(77, 32)
+        Me.btnAdd.Size = New System.Drawing.Size(77, 68)
         Me.btnAdd.TabIndex = 1
         Me.btnAdd.Text = "Add"
         Me.btnAdd.UseVisualStyleBackColor = True
@@ -122,7 +124,7 @@ Partial Class Main
         'DateTimePicker1
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(208, 15)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(5, 41)
         Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(98, 20)
@@ -130,7 +132,7 @@ Partial Class Main
         '
         'tbxKG
         '
-        Me.tbxKG.Location = New System.Drawing.Point(5, 39)
+        Me.tbxKG.Location = New System.Drawing.Point(5, 41)
         Me.tbxKG.Margin = New System.Windows.Forms.Padding(2)
         Me.tbxKG.Name = "tbxKG"
         Me.tbxKG.Size = New System.Drawing.Size(68, 20)
@@ -138,7 +140,7 @@ Partial Class Main
         '
         'tbxStone
         '
-        Me.tbxStone.Location = New System.Drawing.Point(169, 39)
+        Me.tbxStone.Location = New System.Drawing.Point(89, 41)
         Me.tbxStone.Margin = New System.Windows.Forms.Padding(2)
         Me.tbxStone.Name = "tbxStone"
         Me.tbxStone.Size = New System.Drawing.Size(68, 20)
@@ -146,7 +148,7 @@ Partial Class Main
         '
         'tbxLbs
         '
-        Me.tbxLbs.Location = New System.Drawing.Point(241, 39)
+        Me.tbxLbs.Location = New System.Drawing.Point(161, 41)
         Me.tbxLbs.Margin = New System.Windows.Forms.Padding(2)
         Me.tbxLbs.Name = "tbxLbs"
         Me.tbxLbs.Size = New System.Drawing.Size(65, 20)
@@ -167,7 +169,7 @@ Partial Class Main
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(169, 18)
+        Me.RadioButton2.Location = New System.Drawing.Point(89, 18)
         Me.RadioButton2.Margin = New System.Windows.Forms.Padding(2)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(55, 17)
@@ -182,7 +184,7 @@ Partial Class Main
         Me.grdSio.AllowUserToDeleteRows = False
         Me.grdSio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdSio.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
-        Me.grdSio.Location = New System.Drawing.Point(269, 165)
+        Me.grdSio.Location = New System.Drawing.Point(269, 113)
         Me.grdSio.Margin = New System.Windows.Forms.Padding(2)
         Me.grdSio.Name = "grdSio"
         Me.grdSio.RowHeadersVisible = False
@@ -248,7 +250,7 @@ Partial Class Main
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(311, 44)
+        Me.GroupBox1.Size = New System.Drawing.Size(131, 72)
         Me.GroupBox1.TabIndex = 11
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "User and Date"
@@ -260,9 +262,9 @@ Partial Class Main
         Me.GroupBox2.Controls.Add(Me.tbxStone)
         Me.GroupBox2.Controls.Add(Me.RadioButton1)
         Me.GroupBox2.Controls.Add(Me.tbxKG)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 65)
+        Me.GroupBox2.Location = New System.Drawing.Point(149, 12)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(311, 71)
+        Me.GroupBox2.Size = New System.Drawing.Size(236, 72)
         Me.GroupBox2.TabIndex = 12
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Weight and Unit"
@@ -271,37 +273,42 @@ Partial Class Main
         '
         Me.chtBen.BackSecondaryColor = System.Drawing.Color.Silver
         Me.chtBen.BorderSkin.BorderColor = System.Drawing.Color.Gray
-        ChartArea3.AxisX.LabelStyle.Enabled = False
-        ChartArea3.AxisX.MajorGrid.LineWidth = 0
-        ChartArea3.AxisY.LabelStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ChartArea3.AxisY.LineColor = System.Drawing.Color.LightGray
-        ChartArea3.AxisY.MajorGrid.LineWidth = 0
-        ChartArea3.Name = "ChartArea1"
-        Me.chtBen.ChartAreas.Add(ChartArea3)
-        Me.chtBen.Enabled = False
-        Legend3.Enabled = False
-        Legend3.Name = "Legend1"
-        Me.chtBen.Legends.Add(Legend3)
-        Me.chtBen.Location = New System.Drawing.Point(11, 336)
+        ChartArea1.AxisX.IsMarginVisible = False
+        ChartArea1.AxisX.IsStartedFromZero = False
+        ChartArea1.AxisX.LabelStyle.Enabled = False
+        ChartArea1.AxisX.MajorGrid.LineWidth = 0
+        ChartArea1.AxisY.IsStartedFromZero = False
+        ChartArea1.AxisY.LabelStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea1.AxisY.LineColor = System.Drawing.Color.LightGray
+        ChartArea1.AxisY.MajorGrid.LineWidth = 0
+        ChartArea1.AxisY.Maximum = 100.0R
+        ChartArea1.AxisY.Minimum = 70.0R
+        ChartArea1.Name = "ChartArea1"
+        Me.chtBen.ChartAreas.Add(ChartArea1)
+        Legend1.Enabled = False
+        Legend1.Name = "Legend1"
+        Me.chtBen.Legends.Add(Legend1)
+        Me.chtBen.Location = New System.Drawing.Point(11, 284)
         Me.chtBen.Name = "chtBen"
         Me.chtBen.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series5.ChartArea = "ChartArea1"
-        Series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline
-        Series5.Legend = "Legend1"
-        Series5.Name = "Series1"
-        Series6.ChartArea = "ChartArea1"
-        Series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-        Series6.Legend = "Legend1"
-        Series6.Name = "Series2"
-        Me.chtBen.Series.Add(Series5)
-        Me.chtBen.Series.Add(Series6)
+        Series1.ChartArea = "ChartArea1"
+        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series1.CustomProperties = "EmptyPointValue=Zero"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        Series2.ChartArea = "ChartArea1"
+        Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series2"
+        Me.chtBen.Series.Add(Series1)
+        Me.chtBen.Series.Add(Series2)
         Me.chtBen.Size = New System.Drawing.Size(254, 150)
         Me.chtBen.TabIndex = 13
         Me.chtBen.Text = "Chart1"
         '
         'btnGoal
         '
-        Me.btnGoal.Location = New System.Drawing.Point(11, 492)
+        Me.btnGoal.Location = New System.Drawing.Point(208, 440)
         Me.btnGoal.Name = "btnGoal"
         Me.btnGoal.Size = New System.Drawing.Size(120, 23)
         Me.btnGoal.TabIndex = 16
@@ -313,7 +320,7 @@ Partial Class Main
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label2.Location = New System.Drawing.Point(14, 139)
+        Me.Label2.Location = New System.Drawing.Point(14, 87)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(44, 24)
         Me.Label2.TabIndex = 17
@@ -324,69 +331,97 @@ Partial Class Main
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label3.Location = New System.Drawing.Point(272, 139)
+        Me.Label3.Location = New System.Drawing.Point(272, 87)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(80, 24)
         Me.Label3.TabIndex = 18
         Me.Label3.Text = "Siobhan"
         '
-        'Button1
+        'lblBenGoal
         '
-        Me.Button1.Location = New System.Drawing.Point(456, 31)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 19
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.lblBenGoal.AutoSize = True
+        Me.lblBenGoal.Location = New System.Drawing.Point(9, 437)
+        Me.lblBenGoal.Name = "lblBenGoal"
+        Me.lblBenGoal.Size = New System.Drawing.Size(166, 13)
+        Me.lblBenGoal.TabIndex = 22
+        Me.lblBenGoal.Text = "You are WW away from your goal"
         '
-        'Button2
+        'lblSioGoal
         '
-        Me.Button2.Location = New System.Drawing.Point(456, 61)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 20
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.lblSioGoal.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblSioGoal.Location = New System.Drawing.Point(334, 432)
+        Me.lblSioGoal.Name = "lblSioGoal"
+        Me.lblSioGoal.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.lblSioGoal.Size = New System.Drawing.Size(189, 18)
+        Me.lblSioGoal.TabIndex = 23
+        Me.lblSioGoal.Text = "You are 60kg away from your goal"
+        Me.lblSioGoal.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblBenStone
+        '
+        Me.lblBenStone.AutoSize = True
+        Me.lblBenStone.Location = New System.Drawing.Point(12, 454)
+        Me.lblBenStone.Name = "lblBenStone"
+        Me.lblBenStone.Size = New System.Drawing.Size(64, 13)
+        Me.lblBenStone.TabIndex = 24
+        Me.lblBenStone.Text = "lblBenStone"
+        '
+        'lblSioStone
+        '
+        Me.lblSioStone.Location = New System.Drawing.Point(336, 454)
+        Me.lblSioStone.Name = "lblSioStone"
+        Me.lblSioStone.Size = New System.Drawing.Size(187, 13)
+        Me.lblSioStone.TabIndex = 25
+        Me.lblSioStone.Text = "lblBenStone"
+        Me.lblSioStone.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'chtSio
         '
         Me.chtSio.BackSecondaryColor = System.Drawing.Color.Silver
         Me.chtSio.BorderSkin.BorderColor = System.Drawing.Color.Gray
-        ChartArea4.AxisX.LabelStyle.Enabled = False
-        ChartArea4.AxisX.MajorGrid.LineWidth = 0
-        ChartArea4.AxisY.LineColor = System.Drawing.Color.LightGray
-        ChartArea4.AxisY.MajorGrid.LineWidth = 0
-        ChartArea4.Name = "ChartArea1"
-        Me.chtSio.ChartAreas.Add(ChartArea4)
-        Me.chtSio.Enabled = False
-        Legend4.Enabled = False
-        Legend4.Name = "Legend1"
-        Me.chtSio.Legends.Add(Legend4)
-        Me.chtSio.Location = New System.Drawing.Point(269, 336)
+        ChartArea2.AxisX.IsMarginVisible = False
+        ChartArea2.AxisX.IsStartedFromZero = False
+        ChartArea2.AxisX.LabelStyle.Enabled = False
+        ChartArea2.AxisX.MajorGrid.LineWidth = 0
+        ChartArea2.AxisY.IsStartedFromZero = False
+        ChartArea2.AxisY.LabelStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea2.AxisY.LineColor = System.Drawing.Color.LightGray
+        ChartArea2.AxisY.MajorGrid.LineWidth = 0
+        ChartArea2.AxisY.Maximum = 100.0R
+        ChartArea2.AxisY.Minimum = 70.0R
+        ChartArea2.Name = "ChartArea1"
+        Me.chtSio.ChartAreas.Add(ChartArea2)
+        Legend2.Enabled = False
+        Legend2.Name = "Legend1"
+        Me.chtSio.Legends.Add(Legend2)
+        Me.chtSio.Location = New System.Drawing.Point(269, 284)
         Me.chtSio.Name = "chtSio"
         Me.chtSio.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
-        Series7.ChartArea = "ChartArea1"
-        Series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline
-        Series7.Legend = "Legend1"
-        Series7.Name = "Series1"
-        Series8.ChartArea = "ChartArea1"
-        Series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-        Series8.Legend = "Legend1"
-        Series8.Name = "Series2"
-        Me.chtSio.Series.Add(Series7)
-        Me.chtSio.Series.Add(Series8)
+        Series3.ChartArea = "ChartArea1"
+        Series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series3.CustomProperties = "EmptyPointValue=Zero"
+        Series3.Legend = "Legend1"
+        Series3.Name = "Series1"
+        Series4.ChartArea = "ChartArea1"
+        Series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series4.Legend = "Legend1"
+        Series4.Name = "Series2"
+        Me.chtSio.Series.Add(Series3)
+        Me.chtSio.Series.Add(Series4)
         Me.chtSio.Size = New System.Drawing.Size(254, 150)
-        Me.chtSio.TabIndex = 21
+        Me.chtSio.TabIndex = 26
         Me.chtSio.Text = "Chart1"
         '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(537, 524)
+        Me.ClientSize = New System.Drawing.Size(537, 475)
         Me.Controls.Add(Me.chtSio)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.lblSioStone)
+        Me.Controls.Add(Me.lblBenStone)
+        Me.Controls.Add(Me.lblSioGoal)
+        Me.Controls.Add(Me.lblBenGoal)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnGoal)
@@ -438,7 +473,9 @@ Partial Class Main
     Friend WithEvents btnGoal As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents lblBenGoal As Label
+    Friend WithEvents lblSioGoal As Label
+    Friend WithEvents lblBenStone As Label
+    Friend WithEvents lblSioStone As Label
     Friend WithEvents chtSio As DataVisualization.Charting.Chart
 End Class

@@ -9,7 +9,12 @@ Public Class Main
     Dim GridView As Object
     Dim userfile As String
     Public goalBen As Decimal = My.Settings.goalBen
-    Public kgoalSio As Decimal = My.Settings.goalSio
+    Public goalSio As Decimal = My.Settings.goalSio
+    Public refreshCheck As Boolean
+
+
+    Friend WithEvents goalsForm As SetGoal
+
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
@@ -82,14 +87,19 @@ Public Class Main
 
     End Sub
 
-    Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles radBen.CheckedChanged
-
-    End Sub
-
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         checkfiles()
         reader()
         RefreshCharts()
+    End Sub
+    Private Sub Main_Ref(sender As Object, e As EventArgs) Handles Me.Activated
+
+        If refreshCheck = True Then
+            RefreshCharts()
+        Else
+
+        End If
+
     End Sub
 
     Sub reader()
@@ -152,25 +162,52 @@ Public Class Main
 
     Private Sub RefreshCharts()
         chtBen.Series(0).Points.Clear()
-        For Count As Integer = 0 To grdBen.Rows.Count - 2
+        For Count As Integer = 0 To grdBen.Rows.Count - 1
             chtBen.Series(0).Points.AddXY(grdBen.Item(0, Count).Value, grdBen.Item(1, Count).Value)
         Next
         chtBen.Series(1).Points.Clear()
-        For Count As Integer = 0 To grdBen.Rows.Count - 2
+        For Count As Integer = 0 To grdBen.Rows.Count - 1
             chtBen.Series(1).Points.AddXY(grdBen.Item(0, Count).Value, goalBen)
             chtBen.Series(1).Color = Color.Green
         Next
+        Dim lastIndex As Integer
+        Dim benWeight As Decimal
+        Dim sioWeight As Decimal
+
+
 
 
         chtSio.Series(0).Points.Clear()
-        For Count As Integer = 0 To grdSio.Rows.Count - 2
+        For Count As Integer = 0 To grdSio.Rows.Count - 1
             chtSio.Series(0).Points.AddXY(grdSio.Item(0, Count).Value, grdSio.Item(1, Count).Value)
         Next
         chtSio.Series(1).Points.Clear()
-        For Count As Integer = 0 To grdSio.Rows.Count - 2
+        For Count As Integer = 0 To grdSio.Rows.Count - 1
             chtSio.Series(1).Points.AddXY(grdSio.Item(0, Count).Value, goalSio)
             chtSio.Series(1).Color = Color.Green
         Next
+        lastIndex = grdBen.Rows.Count - 1
+        benWeight = grdBen.Rows(lastIndex).Cells(1).Value
+        lblBenGoal.Text = "You are " & benWeight - goalBen & "kg away from your goal"
+        WeightLbs = Math.Round((benWeight - goalBen) * 2.20462, 2)
+        WeightSt = WeightLbs \ 14
+        lblBenStone.Text = WeightSt & "st, " & WeightLbs - (WeightSt * 14) & "lbs"
+        If (benWeight - goalBen) < 0 Then
+            lblBenGoal.ForeColor = Color.Green
+            lblBenStone.ForeColor = Color.Green
+        End If
+
+        lastIndex = grdSio.Rows.Count - 1
+        sioWeight = grdSio.Rows(lastIndex).Cells(1).Value
+        lblSioGoal.Text = "You are " & sioWeight - goalSio & "kg away from your goal"
+        WeightLbs = Math.Round((sioWeight - goalSio) * 2.20462, 2)
+        WeightSt = WeightLbs \ 14
+        lblSioStone.Text = WeightSt & "st, " & WeightLbs - (WeightSt * 14) & "lbs"
+        If (sioWeight - goalSio) < 0 Then
+            lblSioGoal.ForeColor = Color.Green
+            lblSioStone.ForeColor = Color.Green
+        End If
+        refreshCheck = False
 
     End Sub
 

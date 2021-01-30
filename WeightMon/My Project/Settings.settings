@@ -2,10 +2,10 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
   <Profiles />
   <Settings>
-    <Setting Name="goalBen" Type="System.Decimal" Scope="Application">
+    <Setting Name="goalBen" Type="System.Decimal" Scope="User">
       <Value Profile="(Default)">131.6</Value>
     </Setting>
-    <Setting Name="goalSio" Type="System.Decimal" Scope="Application">
+    <Setting Name="goalSio" Type="System.Decimal" Scope="User">
       <Value Profile="(Default)">97.1</Value>
     </Setting>
   </Settings>

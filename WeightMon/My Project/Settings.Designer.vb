@@ -54,22 +54,28 @@ Namespace My
             End Get
         End Property
         
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("131.6")>  _
-        Public ReadOnly Property goalBen() As Decimal
+        Public Property goalBen() As Decimal
             Get
                 Return CType(Me("goalBen"),Decimal)
             End Get
+            Set
+                Me("goalBen") = value
+            End Set
         End Property
         
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("97.1")>  _
-        Public ReadOnly Property goalSio() As Decimal
+        Public Property goalSio() As Decimal
             Get
                 Return CType(Me("goalSio"),Decimal)
             End Get
+            Set
+                Me("goalSio") = value
+            End Set
         End Property
     End Class
 End Namespace

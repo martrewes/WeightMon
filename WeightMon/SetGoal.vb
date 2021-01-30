@@ -6,6 +6,14 @@
     End Sub
 
     Private Sub btnSetGoal_Click(sender As Object, e As EventArgs) Handles btnSetGoal.Click
-        Global.WeightMon.My.Forms.Main.
+        Main.goalBen = tbxBen.Text
+        Main.goalSio = tbxSio.Text
+        My.Settings.goalBen = tbxBen.Text
+        My.Settings.goalSio = tbxSio.Text
+        Main.refreshCheck = True
+
+        Me.Close()
+
+
     End Sub
 End Class

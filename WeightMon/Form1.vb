@@ -8,8 +8,8 @@ Public Class Main
     Dim WeightLbs As Decimal
     Dim GridView As Object
     Dim userfile As String
-    Dim goalBen As Decimal = My.Settings.goalBen
-    Dim goalSio As Decimal = My.Settings.goalSio
+    Public goalBen As Decimal = My.Settings.goalBen
+    Public kgoalSio As Decimal = My.Settings.goalSio
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAdd.Click

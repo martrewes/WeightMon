@@ -25,9 +25,11 @@ Partial Class Main
         Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.grdBen = New System.Windows.Forms.DataGridView()
         Me.colDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colWeight = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -50,11 +52,13 @@ Partial Class Main
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.chtBen = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.chtSio = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnGoal = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.chtSio = New System.Windows.Forms.DataVisualization.Charting.Chart()
         CType(Me.grdBen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.grdSio, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -266,40 +270,34 @@ Partial Class Main
         '
         'chtBen
         '
+        Me.chtBen.BackSecondaryColor = System.Drawing.Color.Silver
+        Me.chtBen.BorderSkin.BorderColor = System.Drawing.Color.Gray
+        ChartArea1.AxisX.LabelStyle.Enabled = False
+        ChartArea1.AxisX.MajorGrid.LineWidth = 0
+        ChartArea1.AxisY.LineColor = System.Drawing.Color.LightGray
+        ChartArea1.AxisY.MajorGrid.LineWidth = 0
         ChartArea1.Name = "ChartArea1"
         Me.chtBen.ChartAreas.Add(ChartArea1)
+        Me.chtBen.Enabled = False
+        Legend1.Enabled = False
         Legend1.Name = "Legend1"
         Me.chtBen.Legends.Add(Legend1)
         Me.chtBen.Location = New System.Drawing.Point(11, 336)
         Me.chtBen.Name = "chtBen"
         Me.chtBen.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
         Series1.ChartArea = "ChartArea1"
-        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline
         Series1.Legend = "Legend1"
         Series1.Name = "Series1"
-        Me.chtBen.Series.Add(Series1)
-        Me.chtBen.Size = New System.Drawing.Size(254, 150)
-        Me.chtBen.TabIndex = 13
-        Me.chtBen.Text = "Chart1"
-        '
-        'chtSio
-        '
-        ChartArea2.Name = "ChartArea1"
-        Me.chtSio.ChartAreas.Add(ChartArea2)
-        Me.chtSio.Enabled = False
-        Legend2.Name = "Legend1"
-        Me.chtSio.Legends.Add(Legend2)
-        Me.chtSio.Location = New System.Drawing.Point(269, 336)
-        Me.chtSio.Name = "chtSio"
-        Me.chtSio.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
         Series2.ChartArea = "ChartArea1"
         Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
         Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        Me.chtSio.Series.Add(Series2)
-        Me.chtSio.Size = New System.Drawing.Size(254, 150)
-        Me.chtSio.TabIndex = 14
-        Me.chtSio.Text = "Chart1"
+        Series2.Name = "Series2"
+        Me.chtBen.Series.Add(Series1)
+        Me.chtBen.Series.Add(Series2)
+        Me.chtBen.Size = New System.Drawing.Size(254, 150)
+        Me.chtBen.TabIndex = 13
+        Me.chtBen.Text = "Chart1"
         '
         'Label1
         '
@@ -343,16 +341,67 @@ Partial Class Main
         Me.Label3.TabIndex = 18
         Me.Label3.Text = "Siobhan"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(456, 31)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 19
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(456, 61)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 20
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'chtSio
+        '
+        Me.chtSio.BackSecondaryColor = System.Drawing.Color.Silver
+        Me.chtSio.BorderSkin.BorderColor = System.Drawing.Color.Gray
+        ChartArea2.AxisX.LabelStyle.Enabled = False
+        ChartArea2.AxisX.MajorGrid.LineWidth = 0
+        ChartArea2.AxisY.LineColor = System.Drawing.Color.LightGray
+        ChartArea2.AxisY.MajorGrid.LineWidth = 0
+        ChartArea2.Name = "ChartArea1"
+        Me.chtSio.ChartAreas.Add(ChartArea2)
+        Me.chtSio.Enabled = False
+        Legend2.Enabled = False
+        Legend2.Name = "Legend1"
+        Me.chtSio.Legends.Add(Legend2)
+        Me.chtSio.Location = New System.Drawing.Point(269, 336)
+        Me.chtSio.Name = "chtSio"
+        Me.chtSio.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones
+        Series3.ChartArea = "ChartArea1"
+        Series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline
+        Series3.Legend = "Legend1"
+        Series3.Name = "Series1"
+        Series4.ChartArea = "ChartArea1"
+        Series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series4.Legend = "Legend1"
+        Series4.Name = "Series2"
+        Me.chtSio.Series.Add(Series3)
+        Me.chtSio.Series.Add(Series4)
+        Me.chtSio.Size = New System.Drawing.Size(254, 150)
+        Me.chtSio.TabIndex = 21
+        Me.chtSio.Text = "Chart1"
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(537, 524)
+        Me.Controls.Add(Me.chtSio)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnGoal)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.chtSio)
         Me.Controls.Add(Me.chtBen)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -361,6 +410,7 @@ Partial Class Main
         Me.Controls.Add(Me.grdBen)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Main"
+        Me.ShowIcon = False
         Me.Text = "Weight Monitor"
         CType(Me.grdBen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.grdSio, System.ComponentModel.ISupportInitialize).EndInit()
@@ -397,9 +447,11 @@ Partial Class Main
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents chtBen As DataVisualization.Charting.Chart
-    Friend WithEvents chtSio As DataVisualization.Charting.Chart
     Friend WithEvents Label1 As Label
     Friend WithEvents btnGoal As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents chtSio As DataVisualization.Charting.Chart
 End Class

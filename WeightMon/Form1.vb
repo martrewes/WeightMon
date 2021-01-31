@@ -30,7 +30,11 @@ Public Class Main
 
         If GridView Is Nothing Then
             MsgBox("Select user")
-        Else AddData()
+        Else
+            Dim ask As MsgBoxResult = MsgBox("You are about to add a record, are you sure you want to continue? (This cannot be undone)", MsgBoxStyle.YesNo)
+            If ask = MsgBoxResult.Yes Then
+                AddData()
+            End If
         End If
 
     End Sub
@@ -176,25 +180,28 @@ Public Class Main
         Dim lastIndex As Integer
         Dim benWeight As Decimal
         Dim sioWeight As Decimal
+        Dim BMI As Decimal
 
 
 
 
-        chtSio.Series(0).Points.Clear()
-        For Count As Integer = 0 To grdSio.Rows.Count - 1
-            chtSio.Series(0).Points.AddXY(grdSio.Item(0, Count).Value, grdSio.Item(1, Count).Value)
-        Next
         chtSio.Series(1).Points.Clear()
         For Count As Integer = 0 To grdSio.Rows.Count - 1
             chtSio.Series(1).Points.AddXY(grdSio.Item(0, Count).Value, goalSio)
             chtSio.Series(1).Color = Color.Green
         Next
+        chtSio.Series(0).Points.Clear()
+        For Count As Integer = 0 To grdSio.Rows.Count - 1
+            chtSio.Series(0).Points.AddXY(grdSio.Item(0, Count).Value, grdSio.Item(1, Count).Value)
+        Next
+
         lastIndex = grdBen.Rows.Count - 1
         benWeight = grdBen.Rows(lastIndex).Cells(1).Value
         lblBenGoal.Text = "You are " & benWeight - goalBen & "kg away from your goal"
+        BMI = Math.Round(benWeight / (1.73 ^ 2), 2)
         WeightLbs = Math.Round((benWeight - goalBen) * 2.20462, 2)
         WeightSt = WeightLbs \ 14
-        lblBenStone.Text = WeightSt & "st, " & WeightLbs - (WeightSt * 14) & "lbs"
+        lblBenStone.Text = "BMI: " & BMI & "        " & WeightSt & "st, " & WeightLbs - (WeightSt * 14) & "lbs"
         If (benWeight - goalBen) < 0 Then
             lblBenGoal.ForeColor = Color.Green
             lblBenStone.ForeColor = Color.Green
@@ -206,9 +213,10 @@ Public Class Main
         lastIndex = grdSio.Rows.Count - 1
         sioWeight = grdSio.Rows(lastIndex).Cells(1).Value
         lblSioGoal.Text = "You are " & sioWeight - goalSio & "kg away from your goal"
+        BMI = Math.Round(sioWeight / (1.6 ^ 2), 2)
         WeightLbs = Math.Round((sioWeight - goalSio) * 2.20462, 2)
         WeightSt = WeightLbs \ 14
-        lblSioStone.Text = WeightSt & "st, " & WeightLbs - (WeightSt * 14) & "lbs"
+        lblSioStone.Text = "BMI: " & BMI & "        " & WeightSt & "st, " & WeightLbs - (WeightSt * 14) & "lbs"
         If (sioWeight - goalSio) < 0 Then
             lblSioGoal.ForeColor = Color.Green
             lblSioStone.ForeColor = Color.Green
